@@ -1,0 +1,19 @@
+{
+  "name": "node-js-express-pug-dating-app-make-america-date-again",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nss-day-cohort-17/node-js-express-pug-dating-app-make-america-date-again.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nss-day-cohort-17/node-js-express-pug-dating-app-make-america-date-again/issues"
+  },
+  "homepage": "https://github.com/nss-day-cohort-17/node-js-express-pug-dating-app-make-america-date-again#readme"
+}
