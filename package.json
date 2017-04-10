@@ -15,9 +15,6 @@
   "bugs": {
     "url": "https://github.com/nss-day-cohort-17/node-js-express-pug-dating-app-make-america-date-again/issues"
   },
-<<<<<<< HEAD
-  "homepage": "https://github.com/nss-day-cohort-17/node-js-express-pug-dating-app-make-america-date-again#readme"
-=======
   "homepage": "https://github.com/nss-day-cohort-17/node-js-express-pug-dating-app-make-america-date-again#readme",
   "dependencies": {
     "bcrypt": "^1.0.2",
@@ -31,5 +28,4 @@
     "passport-local": "^1.0.0",
     "pug": "^2.0.0-beta11"
   }
->>>>>>> 6c8554b9287387df140681e3def529291a661268
 }
