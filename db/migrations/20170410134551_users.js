@@ -8,7 +8,7 @@ exports.up = function(knex, Promise) {
   	table.string('height');
   	table.integer('handsize');
   	table.boolean('citizenship');
-  	table.specificType('likes', knex.raw('text[]'))
+  	table.specificType('likes', knex.raw('integer[]'))
   	table.integer('quest1');
   	table.integer('quest2');
   	table.integer('quest3');
