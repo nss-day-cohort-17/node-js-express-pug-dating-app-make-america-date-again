@@ -1,0 +1,13 @@
+nav.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    a.navbar-brand(href='/') The Dating Game
+      
+      #navbar.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          if email 
+            li: a(href='/logout') Logout
+          else
+            li(class={ active: page === 'Login'})
+              a(href='/login') Login
+            li(class={ active: page === 'Register'})
+              a(href='/register') Register
