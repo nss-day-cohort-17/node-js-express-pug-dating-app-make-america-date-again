@@ -18,6 +18,6 @@ router.use((req, res, next) => {
 //private routes
 router.use(require('./logout'))
 //in case myLikes route is actually needed
-router.use(require('./myLikes'))
+// router.use(require('./myLikes'))
 
 module.exports = router;
