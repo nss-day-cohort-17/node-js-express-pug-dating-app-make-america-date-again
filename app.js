@@ -21,9 +21,9 @@ app.locals.errors = {};
 
 app.use(express.static('public'));
 app.use(routes);
-// app.use((req, res) => {
-// 	res.render('404');
-// })
+app.use((req, res) => {
+	res.render('404');
+})
 
 // ******************* end of middleware ******************
 
