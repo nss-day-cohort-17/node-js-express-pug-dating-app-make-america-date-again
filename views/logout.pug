@@ -2,9 +2,18 @@ extends partials/layout.pug
 
 block content
   .heading
+<<<<<<< HEAD
     h2 Do you wanna build the wall between yourself and love?
   .login-form
     form(method = 'POST')
       .logout-form__submit
         a.btn.btn-danger.btn-lg(href = '/') Cancel
         input.btn.btn-success.btn-lg(type = 'submit' value = 'Logout')
+=======
+    h1 Are you sure you want to logout?
+  .login-form
+    form(method='POST')
+      .logout-form__submit
+        a.btn.btn-danger.btn-lg(href='/') Cancel
+        input.btn.btn-success.btn-lg(type='submit' value='Logout')
+>>>>>>> 8848fac719819201a3ddbe04b3eaeb196fd42583
