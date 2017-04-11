@@ -4,8 +4,8 @@ const {Router} = require('express');
 const router = Router();
 
 //public routes
-router.use(require('./login-register'))
-
+// router.use(require('./login-register'))
+router.use(require('./home'))
 //login guard middleware that reroutes home if not registered
 // router.use((req, res, next) => {
 //   if(req.isAuthenticated()) {
@@ -16,7 +16,7 @@ router.use(require('./login-register'))
 // });
 
 //private routes
-router.use(require('./logout'))
+// router.use(require('./logout'))
 //in case myLikes route is actually needed
 // router.use(require('./myLikes'))
 
