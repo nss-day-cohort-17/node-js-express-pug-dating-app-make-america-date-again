@@ -4,7 +4,8 @@ const {Router} = require('express');
 const router = Router();
 
 //public routes
-// router.use(require('./login-register'))
+router.use(require('./login'))
+router.use(require('./register'))
 router.use(require('./home'))
 //login guard middleware that reroutes home if not registered
 // router.use((req, res, next) => {
