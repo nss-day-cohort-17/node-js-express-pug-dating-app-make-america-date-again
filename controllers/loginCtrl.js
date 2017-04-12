@@ -4,7 +4,7 @@ const passport = require('passport');
 module.exports.show = (req, res) =>
   res.render('login');
 
-module.exports.create = () => {
+module.exports.create = (req, res, next) => {
   passport.authenticate('local', (err, user, msg) => {
     if (err) return next(err)
     if(!user) return res.render('login')

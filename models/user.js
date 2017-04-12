@@ -1,6 +1,6 @@
 'use strict'
 
-const { bookshelf } = require('../db/db');
+const { bookshelf } = require('../db/database');
 
 const { compare } = require('bcryptjs')
 const User = bookshelf.Model.extend({

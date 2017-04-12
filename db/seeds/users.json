@@ -3,7 +3,7 @@
 		{
 			"name" : "Michael Tambornino",
 			"email": "mike@email.com",
-			"password": "",
+			"password": "111",
 			"height" : "5'8",
 			"handsize" : 5,
 			"citizenship" : true,
@@ -18,7 +18,7 @@
 		{
 			"name" : "Donald Trump",
 			"email": "pres@awesome.com",
-			"password": "",
+			"password": "111",
 			"height" : "5'11",
 			"handsize" : 10,
 			"citizenship" : true,
@@ -33,7 +33,7 @@
 		{
 			"name" : "Billy Bush",
 			"email": "billy@bush.com",
-			"password": "",
+			"password": "111",
 			"height" : "5'6",
 			"handsize" : 3,
 			"citizenship" : true,
