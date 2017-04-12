@@ -5,34 +5,85 @@ block content
     h1= pages
   .login
     form(method='POST')
-      if page === 'Register'
-        .form-group
-          label(for='name') Name
-          input.form-control#name(type='text' name='name' placeholder='John Doe' required)
-      .form-group
+      .form-group.col-md-4
+        label(for='name') Name
+        input.form-control#name(type='text' name='name' placeholder='John Doe' value=body.name
+        required)
+      .form-group.col-md-4
         label(for='email') Email Address
-        input.form-control#email(type='email' name='email' placeholder='you@example.com' required)
-      .form-group
+        input.form-control#email(type='email' name='email' placeholder='you@example.com' value=body.email
+        required)
+      .form-group.col-md-4
         label(for='password') Password
-        input.form-control#password(type='password' name='password' placeholder='********' required)
-      if page === 'Register'
-        .form-group
+        input.form-control#password(type='password' name='password' placeholder='********' value=body.password
+        required)
+      .form-group.col-md-4
         label(for='confirmation') Password Confirmation
-        input.form-control#confirmation(type='password' name='confirmation' placeholder='********' required)
-          .form-group
-            label(for='height') Height
-            input.form-control#height(type='text' name='height' placeholder='5\' 10"' required)
-        .form-group
-          label(for='hand_size') Hand Size
-          select
-            option Trump
-            option Kid
-            option Small
-            option Medium
-            option Yuuuuge
-        .form-group
-          label(for='citizenship') Citizenship
-          input.form-control#citizenship(type='text' name='citizenship' placeholder='Yes')
-      .contact-form__submit
+        input.form-control#confirmation(type='password' name='confirmation' placeholder='********' value=body.confirm
+        required)
+      .form-group.col-md-4
+        label(for='height') Height
+        input.form-control#height(type='text' name='height' placeholder='5\' 10"' value=body.height
+        required)
+      .form-group.col-md-4
+        label(for='citizenship') Citizenship
+        select(name='citizenship')
+          option Yes
+          option No
+      .form-group
+        label(for='hand_size') Hand Size
+        select(name='handsize')
+          option Trump
+          option Kid
+          option Small
+          option Medium
+          option Yuuuuge
+      h3 On a scale from 1 to 5 (1 being horrible, 5 being great), how do you feel about...
+      .form-group.col-md-4
+        h3 Kittens
+        .btn-toolbar(role='toolbar')
+          .btn-group(role='group')
+            btn.btn.btn-default(type='button') 1
+            btn.btn.btn-default(type='button') 2
+            btn.btn.btn-default(type='button') 3
+            btn.btn.btn-default(type='button') 4
+            btn.btn.btn-default(type='button') 5
+      .form-group.col-md-4
+        h3 Donald Trump
+        .btn-toolbar(role='toolbar')
+          .btn-group(role='group')
+            btn.btn.btn-default(type='button') 1
+            btn.btn.btn-default(type='button') 2
+            btn.btn.btn-default(type='button') 3
+            btn.btn.btn-default(type='button') 4
+            btn.btn.btn-default(type='button') 5
+      .form-group.col-md-4
+        h3 Justin Bieber
+        .btn-toolbar(role='toolbar')
+          .btn-group(role='group')
+            btn.btn.btn-default(type='button') 1
+            btn.btn.btn-default(type='button') 2
+            btn.btn.btn-default(type='button') 3
+            btn.btn.btn-default(type='button') 4
+            btn.btn.btn-default(type='button') 5
+      .form-group.col-md-6
+        h3 Pizza
+        .btn-toolbar(role='toolbar')
+          .btn-group(role='group')
+            btn.btn.btn-default(type='button') 1
+            btn.btn.btn-default(type='button') 2
+            btn.btn.btn-default(type='button') 3
+            btn.btn.btn-default(type='button') 4
+            btn.btn.btn-default(type='button') 5
+      .form-group.col-md-6
+        h3 Joe Shepherd
+        .btn-toolbar(role='toolbar')
+          .btn-group(role='group')
+            btn.btn.btn-default(type='button') 1
+            btn.btn.btn-default(type='button') 2
+            btn.btn.btn-default(type='button') 3
+            btn.btn.btn-default(type='button') 4
+            btn.btn.btn-default(type='button') 5
+      .contact-form__submit.center
         a.btn.btn-danger.btn-lg(href='/') Cancel
         input.btn.btn-success.btn-lg(type='submit' value=page)

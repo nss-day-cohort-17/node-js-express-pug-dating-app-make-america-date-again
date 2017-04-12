@@ -5,8 +5,8 @@ const users = require('./users.json');
 
 console.log('users', users);
 
-const userPromises = users.map(({name, email, password, height, handsize, citizenship, likes, quest1, quest2, quest3, quest4, quest5, score}) => {
-  return knex('users').insert({name, email, password, height, handsize, citizenship, likes, quest1, quest2, quest3, quest4, quest5, score});
+const userPromises = users.map(({name, email, password}) => {
+  return knex('users').insert({name, email, password});
 })
 
 
