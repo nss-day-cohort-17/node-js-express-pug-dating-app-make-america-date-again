@@ -17,6 +17,7 @@ const routes = require('./routes/');
 //pug config
 app.set('view engine', 'pug');
 
+app.use(bodyParser.urlencoded({extended:false}));
 app.locals.body = {};
 app.locals.errors = {};
 // ***************** begin middleware ***********************
