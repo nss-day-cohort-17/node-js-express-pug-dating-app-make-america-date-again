@@ -16,6 +16,7 @@ router.use(require('./home'))
 // });
 
 //private routes
+router.use(require('./responses'))
 // router.use(require('./logout'))
 //in case myLikes route is actually needed
 // router.use(require('./myLikes'))
