@@ -9,6 +9,8 @@ const session = require('express-session');
 const passport = require('passport');
 const KnexSessionStore = require('connect-session-knex')(session);
 const {knex} = require('./db/database');
+//bookshelf initialized in bookshelf.js in root
+const bookshelf = require('./bookshelf');
 
 const routes = require('./routes/');
 
