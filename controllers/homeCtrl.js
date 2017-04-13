@@ -1,24 +1,24 @@
 'use strict';
 
 const { knex } = require('../db/database')
-const Users = () => knex('users');
-const Profile = () => knex('responses')
+const Users = require('../models/users');
+const Profile = require('../models/responses')
 
 const getUsers = ()=>{
-  return Users().select()
+  return Users.forge().fetchAll()
   .then(rows => {
-    //console.log(rows);
-    return rows
+    console.log(rows.toJSON());
+    return rows.toJSON()
   })
   .catch(error =>{
     throw error
   })
 }
 const getProfiles = () =>{
-  return Profile().select()
+  return Profile.forge().fetchAll()
   .then(rows => {
-    //console.log(rows);
-    return rows
+    console.log(rows.toJSON());
+    return rows.toJSON()
   })
   .catch(error => {
     throw error
@@ -27,11 +27,13 @@ const getProfiles = () =>{
 
 module.exports.show = (req, res) => {
   Promise.all([getUsers(), getProfiles()])
-  .then(([users, profiles])=>{
+  .then(([user, profiles])=>{
     //console.log('users',users, 'profile', profile);
-	  res.render('index', {page: 'Home', users, porfiles});
+	  res.render('index', {page: 'Home', users, profiles});
   })
   .catch((error)=>{
     throw error
   })
 }
+
+module.exports.show()
