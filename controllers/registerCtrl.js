@@ -7,7 +7,9 @@ module.exports.show = (req, res) =>
   res.render('register');
 
 module.exports.create = ({body: {name, email, password, confirmation}}, res) => {
+
   console.log("user", name, email, password);
+  
   if (password === confirmation){
     console.log(email);
     User.findOneByEmail(email)

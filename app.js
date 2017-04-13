@@ -23,6 +23,7 @@ app.locals.errors = {};
 require('./lib/passport-strats');
 app.use(passport.initialize())
 app.use(passport.session())
+
 // ***************** begin middleware ***********************
 
 app.use(express.static('public'));
