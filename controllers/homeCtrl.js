@@ -25,6 +25,8 @@ const getProfiles = () =>{
   })
 }
 
+//need a create? Reference orderCtrl in pizza shack
+
 module.exports.show = (req, res) => {
   Promise.all([getUsers(), getProfiles()])
   .then(([users, profiles])=>{
