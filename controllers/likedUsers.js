@@ -3,6 +3,7 @@
 const User = require('../models/users');
 
 module.exports.show = (req, res, next) => {
+  res.render('likedUsers')
   User.getAllLikedUsers()
     .then((users) => {
       console.log('users', users[0].likedUsers);
