@@ -22,15 +22,15 @@ const User = bookshelf.Model.extend({
         return null
       });
     },
-      getAllUsers: function(){
-        return this.forge().fetchAll()
-        .then(users => users)
-        .catch(() => null)
-      },
-      getAllLikedUsers: function(){
-        return this.forge().query({where: {username: ''}}).fetchAll()
-        .then(users => users.toJSON())
-        .catch(() => null)
-      },
+      // getAllUsers: function(){
+      //   return this.forge().fetchAll()
+      //   .then(users => users)
+      //   .catch(() => null)
+      // },
+      // getAllLikedUsers: function(){
+      //   return this.forge().query({where: {username: ''}}).fetchAll()
+      //   .then(users => users.toJSON())
+      //   .catch(() => null)
+      // },
 });
 module.exports.User = User;
