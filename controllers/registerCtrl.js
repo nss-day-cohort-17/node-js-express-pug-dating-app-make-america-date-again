@@ -1,13 +1,13 @@
 'use strict';
 
-const { User } = require('../models/users')
+const User = require('../models/users')
 const passport = require('passport');
 
 module.exports.show = (req, res) =>
   res.render('register');
 
 module.exports.create = ({body: {name, email, password, confirmation}}, res) => {
-  console.log("user.js cont", name, email, password);
+  console.log("user.js cont", name, email, password, confirmation);
   if (password === confirmation){
     User.findOneByEmail(email)
     .then((user)=> {

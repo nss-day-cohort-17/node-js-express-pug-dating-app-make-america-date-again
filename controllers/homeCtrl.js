@@ -28,8 +28,8 @@ const getProfiles = () =>{
 module.exports.show = (req, res) => {
   Promise.all([getUsers(), getProfiles()])
   .then(([users, profiles])=>{
-    //console.log('users',users, 'profile', profile);
-	  res.render('index', {page: 'Home', users, porfiles});
+    console.log('users',users, 'profile', profiles);
+	  res.render('index', {page: 'Home', users, profiles});
   })
   .catch((error)=>{
     throw error
