@@ -29,7 +29,7 @@ const getProfiles = () =>{
 
 module.exports.show = (req, res) => {
   Promise.all([getUsers(), getProfiles()])
-  .then(([user, profiles])=>{
+  .then(([users, profiles])=>{
     //console.log('users',users, 'profile', profile);
 	  res.render('index', {page: 'Home', users, profiles});
   })
@@ -37,5 +37,3 @@ module.exports.show = (req, res) => {
     throw error
   })
 }
-
-module.exports.show()
