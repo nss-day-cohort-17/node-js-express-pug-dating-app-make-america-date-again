@@ -7,8 +7,11 @@ module.exports.show = (req, res) =>
   res.render('register');
 
 module.exports.create = ({body: {name, email, password, confirmation}}, res) => {
-  console.log("user.js cont", name, email, password, confirmation);
+
+  console.log("user", name, email, password);
+  
   if (password === confirmation){
+    console.log(email);
     User.findOneByEmail(email)
     .then((user)=> {
       if (user) return res.render('register', {msg: 'Email is already registered', page: 'Register'})
