@@ -20,8 +20,11 @@ const User = bookshelf.Model.extend({
       .catch( () => {
         console.log('findOneByEmail catch user model');
         return null
-      });
-    },
+
+      })
+    }
+})
+module.exports = User;
       // getAllUsers: function(){
       //   return this.forge().fetchAll()
       //   .then(users => users)
@@ -32,5 +35,3 @@ const User = bookshelf.Model.extend({
       //   .then(users => users.toJSON())
       //   .catch(() => null)
       // },
-});
-module.exports.User = User;
