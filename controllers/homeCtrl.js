@@ -27,8 +27,8 @@ const getProfiles = () =>{
 
 module.exports.show = (req, res) => {
   Promise.all([getUsers(), getProfiles()])
-  .then(([user, profiles])=>{
-    //console.log('users',users, 'profile', profile);
+  .then(([users, profiles])=>{
+    console.log('users',users, 'profile', profile);
 	  res.render('index', {page: 'Home', users, profiles});
   })
   .catch((error)=>{
