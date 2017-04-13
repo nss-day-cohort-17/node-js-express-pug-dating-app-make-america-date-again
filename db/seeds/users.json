@@ -1,0 +1,48 @@
+[
+
+		{
+			"name" : "Michael Tambornino",
+			"email": "mike@email.com",
+			"password": "111",
+			"height" : "5'8",
+			"handsize" : 5,
+			"citizenship" : true,
+			"likes" : [],
+			"quest1" : 4,
+			"quest2" : 6,
+			"quest3" : 9,
+			"quest4" : 2,
+			"quest5" : 7,
+			"score" : null
+		},
+		{
+			"name" : "Donald Trump",
+			"email": "pres@awesome.com",
+			"password": "111",
+			"height" : "5'11",
+			"handsize" : 10,
+			"citizenship" : true,
+			"likes" : [],
+			"quest1" : 9,
+			"quest2" : 1,
+			"quest3" : 3,
+			"quest4" : 7,
+			"quest5" : 10,
+			"score" : null
+		},
+		{
+			"name" : "Billy Bush",
+			"email": "billy@bush.com",
+			"password": "111",
+			"height" : "5'6",
+			"handsize" : 3,
+			"citizenship" : true,
+			"likes" : [],
+			"quest1" : 4,
+			"quest2" : 8,
+			"quest3" : 2,
+			"quest4" : 9,
+			"quest5" : 6,
+			"score" : null
+		}
+	]

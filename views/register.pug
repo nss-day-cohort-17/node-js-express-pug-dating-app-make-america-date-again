@@ -1,0 +1,26 @@
+extends partials/layout.pug
+
+block content
+  .heading
+    h1= pages
+  .login
+    form(method='POST')
+      .form-group.col-sm-6.col-md-4
+        label(for='name') Name
+        input.form-control#name(type='text' name='name' placeholder='John Doe' value=body.name
+        required)
+      .form-group.col-sm-6.col-md-4
+        label(for='email') Email Address
+        input.form-control#email(type='email' name='email' placeholder='you@example.com' value=body.email
+        required)
+      .form-group.col-sm-6.col-md-4
+        label(for='password') Password
+        input.form-control#password(type='password' name='password' placeholder='********' value=body.password
+        required)
+      .form-group.col-sm-6.col-md-4
+        label(for='confirmation') Password Confirmation
+        input.form-control#confirmation(type='password' name='confirmation' placeholder='********' value=body.confirm
+        required)
+      .contact-form__submit.center
+        a.btn.btn-danger.btn-lg(href='/') Cancel
+        input.btn.btn-success.btn-lg(type='submit' value=page)
