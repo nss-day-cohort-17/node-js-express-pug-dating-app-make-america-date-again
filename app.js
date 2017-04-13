@@ -17,8 +17,12 @@ const routes = require('./routes/');
 //pug config
 app.set('view engine', 'pug');
 
+app.use(bodyParser.urlencoded({extended:false}));
 app.locals.body = {};
 app.locals.errors = {};
+require('./lib/passport-strats');
+app.use(passport.initialize())
+app.use(passport.session())
 // ***************** begin middleware ***********************
 
 app.use(express.static('public'));

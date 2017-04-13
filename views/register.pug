@@ -5,34 +5,22 @@ block content
     h1= pages
   .login
     form(method='POST')
-      if page === 'Register'
-        .form-group
-          label(for='name') Name
-          input.form-control#name(type='text' name='name' placeholder='John Doe' required)
-      .form-group
+      .form-group.col-sm-6.col-md-4
+        label(for='name') Name
+        input.form-control#name(type='text' name='name' placeholder='John Doe' value=body.name
+        required)
+      .form-group.col-sm-6.col-md-4
         label(for='email') Email Address
-        input.form-control#email(type='email' name='email' placeholder='you@example.com' required)
-      .form-group
+        input.form-control#email(type='email' name='email' placeholder='you@example.com' value=body.email
+        required)
+      .form-group.col-sm-6.col-md-4
         label(for='password') Password
-        input.form-control#password(type='password' name='password' placeholder='********' required)
-      if page === 'Register'
-        .form-group
+        input.form-control#password(type='password' name='password' placeholder='********' value=body.password
+        required)
+      .form-group.col-sm-6.col-md-4
         label(for='confirmation') Password Confirmation
-        input.form-control#confirmation(type='password' name='confirmation' placeholder='********' required)
-          .form-group
-            label(for='height') Height
-            input.form-control#height(type='text' name='height' placeholder='5\' 10"' required)
-        .form-group
-          label(for='hand_size') Hand Size
-          select
-            option Trump
-            option Kid
-            option Small
-            option Medium
-            option Yuuuuge
-        .form-group
-          label(for='citizenship') Citizenship
-          input.form-control#citizenship(type='text' name='citizenship' placeholder='Yes')
-      .contact-form__submit
+        input.form-control#confirmation(type='password' name='confirmation' placeholder='********' value=body.confirm
+        required)
+      .contact-form__submit.center
         a.btn.btn-danger.btn-lg(href='/') Cancel
         input.btn.btn-success.btn-lg(type='submit' value=page)
