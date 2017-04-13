@@ -35,4 +35,3 @@ module.exports.show = (req, res) => {
     throw error
   })
 }
-module.exports.show()
