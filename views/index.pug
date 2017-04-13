@@ -2,4 +2,20 @@ extends partials/layout.pug
 
 block content
   .welcome
-    h1 You've tried the best, now try the rest!
+    h1 You've tried the best, now try the rest
+    form(method='POST')
+        each user in users
+            .media#users
+                .media-left.media-middle
+                    a(href='#')
+                    img.media-object(src='user.imgUrl', alt='...')
+                .media-body
+                    h4.media-heading user.name
+                    p I am user.height tall with user.handsize sized hands. Am I Murrcan? user.citizenship
+                    input(
+                    type='checkbox'
+                    value='Like Me!'
+                    selected=body.like && body.like.includes(user.userid)
+                    )
+            .like-stuff__submit
+                a.btn.btn-success.btn-lg(type='submit')
