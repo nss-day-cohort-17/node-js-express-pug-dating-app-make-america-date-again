@@ -1,20 +1,21 @@
 'use strict';
 
+const { User } = require('../models/users')
 const passport = require('passport');
 
 module.exports.show = (req, res) =>
   res.render('register');
 
-module.exports.create = ({body: {email, password, confirmation}}, res) => {
-  console.log("user.js cont", email, password);
+module.exports.create = ({body: {name, email, password, confirmation}}, res) => {
+  console.log("user.js cont", name, email, password);
   if (password === confirmation){
     User.findOneByEmail(email)
     .then((user)=> {
-      if (user) return res.render('register-login', {msg: 'Email is already registered', page: 'Register'})
-      return User.forge({email, password})
+      if (user) return res.render('register', {msg: 'Email is already registered', page: 'Register'})
+      return User.forge({name, email, password})
       .save()
       .then(()=>{
-        res.redirect('/')
+        res.redirect('/questions')
       })
       .catch( () => res.render('register-login', {msg: "probs on the save", page: 'Register'}))
     })
