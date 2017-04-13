@@ -19,52 +19,9 @@ block content
           option Small
           option Medium
           option Yuuuuge
-        h3 On a scale from 1 to 5 (1 being horrible, 5 being great), how do you feel about...
-        .form-group.col-md-4
-        h3 Kittens
-        .btn-toolbar(role='toolbar')
-          .btn-group(role='group')
-            btn.btn.btn-default(type='button') 1
-            btn.btn.btn-default(type='button') 2
-            btn.btn.btn-default(type='button') 3
-            btn.btn.btn-default(type='button') 4
-            btn.btn.btn-default(type='button') 5
-        .form-group.col-sm-6.col-md-4
-        h3 Donald Trump
-        .btn-toolbar(role='toolbar')
-          .btn-group(role='group')
-            btn.btn.btn-default(type='button') 1
-            btn.btn.btn-default(type='button') 2
-            btn.btn.btn-default(type='button') 3
-            btn.btn.btn-default(type='button') 4
-            btn.btn.btn-default(type='button') 5
-        .form-group.col-sm-6.col-md-4
-        h3 Justin Bieber
-        .btn-toolbar(role='toolbar')
-          .btn-group(role='group')
-            btn.btn.btn-default(type='button') 1
-            btn.btn.btn-default(type='button') 2
-            btn.btn.btn-default(type='button') 3
-            btn.btn.btn-default(type='button') 4
-            btn.btn.btn-default(type='button') 5
-        .form-group.col-sm-6.col-md-4
-        h3 Pizza
-        .btn-toolbar(role='toolbar')
-          .btn-group(role='group')
-            btn.btn.btn-default(type='button') 1
-            btn.btn.btn-default(type='button') 2
-            btn.btn.btn-default(type='button') 3
-            btn.btn.btn-default(type='button') 4
-            btn.btn.btn-default(type='button') 5
-        .form-group.col-sm-6
-        h3 Joe Shepherd
-        .btn-toolbar(role='toolbar')
-          .btn-group(role='group')
-            btn.btn.btn-default(type='button') 1
-            btn.btn.btn-default(type='button') 2
-            btn.btn.btn-default(type='button') 3
-            btn.btn.btn-default(type='button') 4
-            btn.btn.btn-default(type='button') 5
+        .form-group
+        label(for='imgUrl') Link to your picture
+        input(type='text' name='imgUrl' placeholder='Paste Image Link...')
         .contact-form__submit.center
         a.btn.btn-danger.btn-lg(href='/') Cancel
         input.btn.btn-success.btn-lg(type='submit' value=Submit)

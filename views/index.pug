@@ -6,16 +6,17 @@ block content
     form(method='POST')
         each user in users
             .media#users
-                .media-left.media-middle
-                    a(href='#')
-                    img.media-object(src='user.imgUrl', alt='...')
-                .media-body
-                    h4.media-heading user.name
-                    p I am user.height tall with user.handsize sized hands. Am I Murrcan? user.citizenship
-                    input(
-                    type='checkbox'
-                    value='Like Me!'
-                    selected=body.like && body.like.includes(user.userid)
-                    )
-            .like-stuff__submit
-                a.btn.btn-success.btn-lg(type='submit')
+                each profile in profiles
+                    .media-left.media-middle
+                        a(href='#')
+                        img.media-object(src='user.imgUrl', alt='...')
+                    .media-body
+                        h4.media-heading #{user.name}
+                        p I am #{profile.height} tall with #{profile.handsize} sized hands. Am I Murrcan? #{profile.citizenship}
+                        input(
+                        type='checkbox'
+                        value='Like Me!'
+                        selected=body.like && body.like.includes(user.userid)
+                        )
+        .like-stuff__submit
+            input.btn.btn-success.btn-lg(type='submit' value='Like Me!')
