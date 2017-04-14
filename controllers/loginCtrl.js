@@ -9,13 +9,14 @@ module.exports.create = (req, res, next) => {
   passport.authenticate('local', (err, user, msg) => {
     if (err) return next(err)
     if(!user) return res.render('login')
-    req.login(user, () => {
+    req.login(user, (err) => {
+      if (err) return next(err)
       res.redirect('/')
     })
   })(req, res, next)
 }
-// module.exports.edit = (req, res) =>
-//   res.render('logout', {page: 'Logout'})
+module.exports.edit = (req, res) =>
+  res.render('logout', {page: 'Logout'})
 
 module.exports.destroy = (req, res) => {
   req.logout()

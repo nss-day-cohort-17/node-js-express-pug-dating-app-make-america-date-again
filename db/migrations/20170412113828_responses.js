@@ -2,10 +2,9 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('responses', (table) => {
   	table.increments();
-  	table.integer('userid');
   	table.string('height');
   	table.string('handsize');
-  	table.boolean('citizenship');
+  	table.string('citizenship');
   	table.specificType('likes', knex.raw('integer[]'))
   	table.integer('quest1');
   	table.integer('quest2');
