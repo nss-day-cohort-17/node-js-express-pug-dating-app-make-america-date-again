@@ -1,10 +1,10 @@
-'use strict';
+// 'use strict';
 
-const { knex } = require('../db/database')
+// const { knex } = require('../db/database')
 
-module.exports.show = (req, res) => {
-	res.render('register')
-}
+// module.exports.show = (req, res) => {
+// 	res.render('register')
+// }
 
-module.exports.create = ({ body }, res, err) => {
-}
+// module.exports.create = ({ body }, res, err) => {
+// }
