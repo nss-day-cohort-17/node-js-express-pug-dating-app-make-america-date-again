@@ -34,6 +34,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // ***************** begin middleware ***********************
+
 app.use( (req, res, next) => {
 	app.locals.email = req.user && req.user.email
 	// ^^^setting email as boolean for pug templates
