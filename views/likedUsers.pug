@@ -1,0 +1,12 @@
+extends partials/layout.pug
+
+block content
+  .container
+    .heading
+      h1 Could you be loved? 💞
+    .row
+      if (!users)
+        h3 Love continues to elude you...
+      else
+        each user in users
+          img(src = '')

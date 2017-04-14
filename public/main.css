@@ -1,0 +1,9 @@
+body {
+	padding-top: 70px;
+	background: slategrey;
+}
+
+.media-object {
+	max-width: 225px;
+	max-height: 225px;
+}
