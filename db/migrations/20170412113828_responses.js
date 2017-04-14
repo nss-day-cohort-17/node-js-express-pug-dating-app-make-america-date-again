@@ -6,12 +6,6 @@ exports.up = function(knex, Promise) {
   	table.string('handsize');
   	table.string('citizenship');
   	table.specificType('likes', knex.raw('integer[]'))
-  	table.integer('quest1');
-  	table.integer('quest2');
-  	table.integer('quest3');
-  	table.integer('quest4');
-  	table.integer('quest5');
-  	table.integer('score');
   	table.string('imgUrl');
   })
 };

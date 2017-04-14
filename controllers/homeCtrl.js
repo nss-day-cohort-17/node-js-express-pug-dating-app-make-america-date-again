@@ -29,7 +29,7 @@ module.exports.show = (req, res) => {
   Promise.all([getUsers(), getProfiles()])
   .then(([users, profiles])=>{
     console.log('im a session', req.session)
-    console.log('im a user', req.user.name)
+    // console.log('im a user', req.user.name)
     // console.log('users',users, 'profile', profiles);
 	  res.render('index', {page: 'Home', user:req.user, users, profiles});
   })
