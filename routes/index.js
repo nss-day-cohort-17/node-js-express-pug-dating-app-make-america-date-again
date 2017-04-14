@@ -7,6 +7,7 @@ const router = Router();
 router.use(require('./login'))
 router.use(require('./register'))
 router.use(require('./home'))
+router.use(require('./logout'))
 //login guard middleware that reroutes home if not registered
 // router.use((req, res, next) => {
 //   if(req.isAuthenticated()) {
