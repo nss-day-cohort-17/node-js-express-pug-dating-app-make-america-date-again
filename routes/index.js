@@ -9,13 +9,13 @@ router.use(require('./register'))
 router.use(require('./home'))
 router.use(require('./logout'))
 //login guard middleware that reroutes home if not registered
-// router.use((req, res, next) => {
-//   if(req.isAuthenticated()) {
-//     next();
-//   } else {
-//     res.redirect('/index')
-//   }
-// });
+router.use((req, res, next) => {
+  if(req.isAuthenticated()) {
+    next();
+  } else {
+    res.redirect('/')
+  }
+});
 
 //private routes
 router.use(require('./responses'))
