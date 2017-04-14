@@ -2,8 +2,9 @@ extends partials/layout.pug
 
 block content
   .welcome
-    h1 You've tried the best, now try the rest
-    form(method='POST')
+    if user
+      form(method='POST')
+        h2 Welcome #{user.name}
         each user in users
             .media#users
                 each profile in profiles
@@ -23,3 +24,6 @@ block content
                             )
         .like-stuff__submit
             input.btn.btn-success.btn-lg(type='submit' value='Like Profiles!')
+    else 
+      h1 You've tried the best, now try the rest
+      h2 Please Login or register to view your soulmate
