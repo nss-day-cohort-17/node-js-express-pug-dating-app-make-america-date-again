@@ -20,5 +20,5 @@ module.exports.edit = (req, res) =>
 
 module.exports.destroy = (req, res) => {
   req.logout()
-  res.redirect('/login')
+  res.redirect('/')
 }
