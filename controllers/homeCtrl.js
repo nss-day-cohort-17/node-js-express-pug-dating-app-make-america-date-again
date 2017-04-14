@@ -7,7 +7,7 @@ const Profile = require('../models/responses')
 const getUsers = ()=>{
   return Users.forge().fetchAll()
   .then(rows => {
-    console.log(rows.toJSON());
+    // console.log(rows.toJSON());
     return rows.toJSON()
   })
   .catch(error =>{
@@ -17,7 +17,7 @@ const getUsers = ()=>{
 const getProfiles = () =>{
   return Profile.forge().fetchAll()
   .then(rows => {
-    console.log(rows.toJSON());
+    // console.log(rows.toJSON());
     return rows.toJSON()
   })
   .catch(error => {
@@ -39,6 +39,7 @@ module.exports.show = (req, res) => {
 }
 
 module.exports.addLikes = (req, res, err) => {
+<<<<<<< HEAD
   const likes = req.body.likes;
   req.body.likes = likes && typeof(likes) == 'string' ? [likes] : likes;
   console.log('body', req.body.likes)
@@ -49,4 +50,16 @@ module.exports.addLikes = (req, res, err) => {
   //   res.redirect('/likedUsers')
   // })
   // .catch(err)
+=======
+  // console.log('body', req.body)
+  const likes = req.body.likes;
+  req.body.likes = likes && typeof(likes) == 'string' ? [likes] : likes;
+  Profile.forge(req.body)
+  .save()
+  .then((likesObj) => {
+    // console.log('im likes', likesObj)
+    res.redirect('/likedUsers')
+  })
+  .catch(err)
+>>>>>>> 980c082efde61e67d8557b270960c6d0732d0314
 }
