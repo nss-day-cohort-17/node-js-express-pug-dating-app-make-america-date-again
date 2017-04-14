@@ -14,11 +14,11 @@ const User = bookshelf.Model.extend({
       return this.forge ({email})
       .fetch()
       .then( (user) => {
-        console.log("findOneByEmail user model", user.get('email'));
+        // console.log("findOneByEmail user model", user.get('email'));
         return user;
       })
       .catch( () => {
-        console.log('findOneByEmail catch user model');
+        // console.log('findOneByEmail catch user model');
         return null
 
       })

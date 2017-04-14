@@ -7,16 +7,19 @@ block content
         each user in users
             .media#users
                 each profile in profiles
-                    .media-left.media-middle
-                        a(href='#')
-                        img.media-object(src='user.imgUrl', alt='...')
-                    .media-body
-                        h4.media-heading #{user.name}
-                        p I am #{profile.height} tall with #{profile.handsize} sized hands. Am I Murrcan? #{profile.citizenship}
-                        input(
-                        type='checkbox'
-                        value='Like Me!'
-                        selected=body.like && body.like.includes(user.userid)
-                        )
+                    if user.id === profile.id
+                        .media-left.media-middle
+                            a(href=profile.imgUrl)
+                                img.media-object(src=profile.imgUrl)
+                        .media-body
+                            h4.media-heading #{user.name}
+                            p I am #{profile.height} tall with #{profile.handsize} sized hands. Am I Murrcan? #{profile.citizenship}
+                            label(for='likeCheck') Like Me
+                            input#likeCheck(
+                            type='checkbox'
+                            value=profile.id
+                            name='likes'
+                            selected=(body.likes && body.likes.includes(profile.id))
+                            )
         .like-stuff__submit
-            input.btn.btn-success.btn-lg(type='submit' value='Like Me!')
+            input.btn.btn-success.btn-lg(type='submit' value='Like Profiles!')
