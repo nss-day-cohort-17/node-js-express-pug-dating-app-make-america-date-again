@@ -39,14 +39,14 @@ module.exports.show = (req, res) => {
 }
 
 module.exports.addLikes = (req, res, err) => {
-  console.log('body', req.body)
   const likes = req.body.likes;
   req.body.likes = likes && typeof(likes) == 'string' ? [likes] : likes;
-  Profile.forge(req.body)
-  .save()
-  .then((likesObj) => {
-    console.log('im likes', likesObj)
-    res.redirect('/likedUsers')
-  })
-  .catch(err)
+  console.log('body', req.body.likes)
+  Profile.forge(req.body.likes)
+  // .save()
+  // .then((likesObj) => {
+  //   console.log('im likes', likesObj)
+  //   res.redirect('/likedUsers')
+  // })
+  // .catch(err)
 }
