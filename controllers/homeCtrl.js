@@ -4,7 +4,7 @@ const { knex } = require('../db/database')
 const Users = require('../models/users');
 const Profile = require('../models/responses')
 
-const getUsers = ()=>{
+const getUsers = () => {
   return Users.forge().fetchAll()
   .then(rows => {
     console.log(rows.toJSON());
