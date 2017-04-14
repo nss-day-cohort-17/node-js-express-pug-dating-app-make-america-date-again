@@ -7,8 +7,8 @@ nav.navbar.navbar-inverse.navbar-fixed-top
           if user
             li: a(href='/questions') Profile
             li: a(href = '/likedUsers') My Likes
-            li: a(href='/') Logout
-            li: a(href='/logout') Logged in as #{user.name}
+            li: a(href='/logout') Logout
+            //- li: a(href='/logout') Logged in as #{user.name}
           else
             li(class={ active: page === 'Login'})
               a(href='/login') Login
