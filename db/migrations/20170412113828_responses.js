@@ -2,6 +2,7 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('responses', (table) => {
   	table.increments();
+    table.integer('userid');
   	table.string('height');
   	table.string('handsize');
   	table.string('citizenship');
