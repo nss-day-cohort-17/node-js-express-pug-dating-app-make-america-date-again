@@ -5,15 +5,17 @@ block content
     if user
       form(method='POST')
         h2 Welcome #{user.name}
-        each user in users
+        each match in users
             .media#users
                 each profile in profiles
-                    if user.id === profile.id
+                    if user.id === match.id
+                      return
+                    else if match.id === profile.id
                         .media-left.media-middle
                             a(href=profile.imgUrl)
                                 img.media-object(src=profile.imgUrl)
                         .media-body
-                            h4.media-heading #{user.name}
+                            h4.media-heading #{match.name}
                             p I am #{profile.height} tall with #{profile.handsize} sized hands. Am I Murrcan? #{profile.citizenship}
                             label(for='likeCheck') Like Me
                             input#likeCheck(
