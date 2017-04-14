@@ -1,7 +1,7 @@
 'use strict';
 
 const { Router } = require('express');
-const { show } = require('../controllers/likedUsers');
+const show = require('../controllers/likedUsers');
 
 const router = Router()
 

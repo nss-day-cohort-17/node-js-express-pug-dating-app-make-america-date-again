@@ -1,6 +1,12 @@
 extends partials/layout.pug
 
 block content
-  .heading
-    h1 Could You Be Loved? 🤔
-  
+  .container
+    .heading
+      h1 Could you be loved? 💞
+    .row
+      if (!users)
+        h3 Love continues to elude you...
+      else
+        each user in users
+          img(src = '')
